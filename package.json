@@ -1,0 +1,30 @@
+{
+  "name": "typescript-express-graphql-custom-build",
+  "version": "1.0.0",
+  "description": "starter kit",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node ./lib/server.ts",
+    "start": "nodemon ./build/server.js",
+    "prod": "npm run build && npm run start"
+  },
+  "author": "Ramfan",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1",
+    "graphql-tools": "^4.0.4",
+    "lodash": "^4.17.11",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.5",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.17.0"
+  }
+}
