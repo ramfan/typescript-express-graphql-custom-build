@@ -3,9 +3,9 @@ import { IResolvers } from "graphql-tools";
 
 export const resolvers: IResolvers = {
   Query: {
-    testQuery: () => testResolver()
+    testQuery: () => testResolver().then(res => res)
   },
   Mutation: {
-    testMutation: () => testResolver()
+    testMutation: () => testResolver().then(res => res)
   }
 };

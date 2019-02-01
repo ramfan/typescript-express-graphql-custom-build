@@ -1,7 +1,7 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
 import { addResolveFunctionsToSchema } from "graphql-tools";
-import { schema } from "./shema/schema";
+import { schema } from "./sсhema/schema";
 import { resolvers } from "./resolvers";
 
 const graphqlHTTP = require("express-graphql");
