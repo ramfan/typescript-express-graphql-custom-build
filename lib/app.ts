@@ -3,8 +3,9 @@ import * as bodyParser from "body-parser";
 import { addResolveFunctionsToSchema } from "graphql-tools";
 import { schema } from "./sсhema/schema";
 import { resolvers } from "./resolvers";
+import * as cors from "cors";
+import * as graphqlHTTP from "express-graphql";
 
-const graphqlHTTP = require("express-graphql");
 class App {
   public app: express.Application;
 
@@ -17,6 +18,7 @@ class App {
     addResolveFunctionsToSchema({ schema, resolvers });
     this.app.use(
       "/",
+      cors(),
       graphqlHTTP({
         schema,
         graphiql: true
